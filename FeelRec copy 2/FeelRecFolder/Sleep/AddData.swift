@@ -17,6 +17,9 @@ struct AddData: View {
     
     var body: some View {
         NavigationStack {
+            ZStack {
+                Color("Color")
+                    .ignoresSafeArea()
                 Form {
                     Section("Days of the Week") {
                         ForEach(week, id: \.self) { day in
@@ -34,7 +37,7 @@ struct AddData: View {
                             }
                             .foregroundColor(.primary)
                         }
-                    }
+                    } .foregroundColor(Color("Color 1"))
                     
                     Section(header: Text("How much did you sleep?")) {
                         DatePicker(selectedWeekDay ?? "", selection: $currentTime, displayedComponents: .hourAndMinute)
@@ -44,12 +47,13 @@ struct AddData: View {
                                     sleepModel.updateSleepTime(for: day, time: newValue)
                             }
                         }
-                    }
+                    } .foregroundColor(Color("Color"))
                     Section(header:
                                 HStack {
                         Text("About Sleep")
                             .font(.system(size: 20))
                             .bold()
+                            .foregroundColor(Color("Color 1"))
                         Image(systemName: "bed.double.fill")
                             .font(.system(size: 20))
                             .foregroundColor(Color.green)
@@ -58,17 +62,19 @@ struct AddData: View {
                         InfoSleepView()
                     }
                 }
-            
+                .scrollContentBackground(.hidden)
+            }
             .navigationBarTitle("Sleep", displayMode: .inline)
             .navigationBarItems(
                 leading: Button(action: {
                     isAdding = false
                 }) {
                     Text("Cancel")
+                        .foregroundColor(Color("Color 1"))
                 },
                 trailing: Button("Save") {
                     isAdding = false
-                }
+                } .foregroundColor(Color("Color 2"))
             )
         }
     }

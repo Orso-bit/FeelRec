@@ -82,7 +82,7 @@ struct ContentView: View {
                                         .padding(.bottom, 5)
                                         .foregroundStyle(Color.black)
                                     Spacer()
-                                    Text("Sentiment Analysis: \(audio.sentiment)")
+                                    Text("\(audio.sentiment)")
                                         .font(.body)
                                         .foregroundColor(.blue)
                                         .padding(.bottom, 5)

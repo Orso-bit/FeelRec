@@ -11,24 +11,31 @@ struct InfoHeartView: View {
     @Binding var infoHeart: Bool
     var body: some View {
         NavigationStack {
-            Form {
-                Section(header:
-                            HStack {
-                    Text("About Heart Rate")
-                        .font(.system(size: 20))
-                        .bold()
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 20))
-                        .foregroundColor(Color.red)
+            ZStack {
+                Color("Color")
+                    .ignoresSafeArea()
+                Form {
+                    Section(header:
+                                HStack {
+                        Text("About Heart Rate")
+                            .font(.system(size: 20))
+                            .bold()
+                            .foregroundColor(Color("Color 1"))
+                        Image(systemName: "heart.fill")
+                            .font(.system(size: 20))
+                            .foregroundColor(Color.red)
+                            .foregroundColor(Color("Color 1"))
+                    }
+                    ){
+                        Text("Heart rate refers to the number of times the heart beats per minute (bpm). It is a key indicator of heart function and overall cardiovascular health.\n\nA normal resting heart rate for adults typically ranges from 60 to 100 beats per minute, though it can vary based on factors like age, fitness level, and activity level.\n\nThe heart rate increases with physical exertion, stress, and excitement, and it decreases during periods of rest or sleep.")
+                    }
                 }
-                ){
-                    Text("Heart rate refers to the number of times the heart beats per minute (bpm). It is a key indicator of heart function and overall cardiovascular health.\n\nA normal resting heart rate for adults typically ranges from 60 to 100 beats per minute, though it can vary based on factors like age, fitness level, and activity level.\n\nThe heart rate increases with physical exertion, stress, and excitement, and it decreases during periods of rest or sleep.")
-                }
-            }
+            .scrollContentBackground(.hidden)
+        }
             .navigationBarItems(
                 trailing: Button("Done") {
                     infoHeart = false
-                }
+                } .foregroundStyle(Color("Color 1"))
             )
         }
     }

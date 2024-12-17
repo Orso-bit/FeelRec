@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		5C0E0B3C2D11D5120060F1B5 /* FeelRec2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FeelRec2-Info.plist"; sourceTree = "<group>"; };
 		5C45AF5F2D00ED50007C606F /* FeelRec2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelRec2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -32,6 +33,7 @@
 		5C45AF562D00ED50007C606F = {
 			isa = PBXGroup;
 			children = (
+				5C0E0B3C2D11D5120060F1B5 /* FeelRec2-Info.plist */,
 				5C45AF612D00ED50007C606F /* FeelRecFolder */,
 				5C45AF602D00ED50007C606F /* Products */,
 			);
@@ -255,6 +257,8 @@
 				DEVELOPMENT_TEAM = YFKZ57M3C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FeelRec2-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FeelRec;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -286,6 +290,8 @@
 				DEVELOPMENT_TEAM = YFKZ57M3C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FeelRec2-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FeelRec;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
