@@ -47,7 +47,6 @@ struct ContentView: View {
                 if audioList.items.isEmpty {
                     VStack {
                         Spacer()
-                        
                         // Show image and text if no audio
                         Image(systemName: "archivebox")
                             .resizable()
@@ -69,24 +68,22 @@ struct ContentView: View {
                         ForEach(audioList.items) { audio in
                             // Limit words to make list more readable
                             if let transcription = audio.transcription, !transcription.isEmpty {
-                                HStack {
+                                VStack {
                                     NavigationLink(destination: EmotionView(sleepModel: SleepModel())) {
                                         Text(currentTime())
                                             .foregroundStyle(.gray)
                                     }
-                                    Spacer()
-                                }
-                                HStack {
-                                    Text(transcription)
-                                        .font(.body)
-                                        .padding(.bottom, 5)
-                                        .foregroundStyle(Color.black)
-                                    Spacer()
-                                    Text("\(audio.sentiment)")
-                                        .font(.body)
-                                        .foregroundColor(.blue)
-                                        .padding(.bottom, 5)
-                                        .multilineTextAlignment(.center)
+                                    Divider()
+                                    HStack {
+                                        Text(transcription)
+                                            .font(.body)
+                                            .foregroundStyle(Color.black)
+                                        Spacer()
+                                        Text("\(audio.sentiment)")
+                                            .font(.body)
+                                            .foregroundColor(.blue)
+                                            .multilineTextAlignment(.center)
+                                    }
                                 }
                             }
                         }
@@ -134,8 +131,8 @@ struct ContentView: View {
                             .resizable()
                             .frame(width: 70, height: 70)
                             .foregroundStyle(isRecording ? Color.gray : Color("Color 2"))
+                        }
                     }
-                }
                 }
             }
             .navigationTitle("All Recordings")
