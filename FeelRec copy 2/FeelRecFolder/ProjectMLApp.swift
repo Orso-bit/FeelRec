@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
-struct ProjectMLApp: App {
+struct YourApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(for: Audio.self)
         }
     }
 }
