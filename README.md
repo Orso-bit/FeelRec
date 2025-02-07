@@ -1,14 +1,14 @@
 # FeelRecApp
 
-FeelRec is an iOS app built with XCode that records and trascribes what the user says, to help people to keep track of your feelings and improving their emotional awareness, exploiting physiological parameters. 
+FeelRec is an iOS app built with XCode that records and trascribes what the user says and makes the sentiment analysis to help people to keep track of their own feelings and improving their emotional awareness. The mobile application is minimalistic especially considering people with eye impairment. FeelRec is inspired by **Voice Memos** and **Journal** iOS mobile applications.
 
 ![App Screenshot](FeelRec.png)
 
 ## Key Features
 
-- Transcribing speech to text
-- Sentiment analysis by CoreML
-- Adding data of your physiological parameters
+- **Transcription** of speech to text
+- **Recording** of speech
+- **CoreML** for sentiment analysis
 
 ## Installation
 
