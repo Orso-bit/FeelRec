@@ -13,7 +13,6 @@ struct YourApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: Audio.self)
         }
     }
 }

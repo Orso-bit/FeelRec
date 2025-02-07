@@ -9,11 +9,8 @@ import SwiftUI
 
 struct InformationView: View {
     
-    @AppStorage("hasSeenInformation") private var hasSeenInformation: Bool = false
     @Environment(\.dismiss) private var dismiss
     @State private var isStartPressed: Bool = false
-    
-    @State private var isStartPresseded: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -34,10 +31,10 @@ struct InformationView: View {
                     .scrollContentBackground(.hidden)
                     .listRowBackground(Color.accentColor)
                     
-                    NavigationLink {
-                        ContentView()
-                            .navigationBarBackButtonHidden(true)
-                    } label: {
+                    Button(action: {
+                        isStartPressed = true
+                        dismiss() // Dismiss the current view to go back to ContentView
+                    }) {
                         Text("Start")
                             .font(.title)
                             .frame(width: 300, height: 70)
@@ -49,7 +46,6 @@ struct InformationView: View {
                     .padding(.top, 20)
                     .simultaneousGesture(TapGesture().onEnded {
                         isStartPressed = true
-                        hasSeenInformation = true
                     })
                     .sensoryFeedback(.success, trigger: isStartPressed)
                 }
@@ -58,7 +54,7 @@ struct InformationView: View {
         }
     }
 }
+
 #Preview {
     InformationView()
 }
-
