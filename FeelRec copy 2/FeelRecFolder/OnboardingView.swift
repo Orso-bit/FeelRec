@@ -19,17 +19,42 @@ struct OnboardingView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    List {
-                        Section(header: Text("How to use FeelRec")
-                            .font(.system(size: 24))
-                            .foregroundColor(Color.black)
-                            .opacity(0.8)) {
-                                Text("FeelRec is a voice recording and sentiment analysis app.\nTo start, tap the record button at the bottom of the screen to begin recording.\nWhen you're finished, tap the same button again to stop the recording. Your recordings will be saved and organized by the date they were made.\nIf you ever want to read the instructions again, tap the icon in the top-left corner. This will allow you to access the information and review it whenever you'd like.\nWhenever you're ready to record again, simply tap the record button at the bottom of the screen.\nThe app will analyze the sentiment of each recording and store it for you to reference later.\nSound or haptic feedback will confirm your actions, so you know exactly what's happening.")
-                                    .font(.system(size: 19))
-                            }
+                    Text("Welcome to FeelRec")
+                        .font(.system(size: 35, weight: .bold, design: .default))
+                        .foregroundColor(.black)
+                        .opacity(0.8)
+                        .padding()
+                    Spacer()
+                    HStack {
+                        Image("Touch")
+                            .opacity(0.8)
+                        VStack(alignment: .leading) {
+                            Text("Record your speech")
+                                .bold()
+                                .font(.system(size: 24))
+                                .padding()
+                            Text("Tap the button to start and stop recording.")
+                                .font(.system(size: 20))
+                                .opacity(0.8)
+                        }
                     }
-                    .scrollContentBackground(.hidden)
-                    .listRowBackground(Color.accentColor)
+                    .padding(.horizontal)
+                    Spacer().frame(height: 50)
+                    HStack {
+                        Image("Sentiment")
+                            .opacity(0.8)
+                        VStack(alignment: .leading) {
+                            Text("Sentiment analysis")
+                                .bold()
+                                .font(.system(size: 24))
+                                .padding()
+                            Text("Make the sentiment analysis of your speech.")
+                                .font(.system(size: 20))
+                                .opacity(0.8)
+                        }
+                    }
+                    .padding(.horizontal)
+                    Spacer()
                     
                     NavigationLink(destination: ContentView())
                     {

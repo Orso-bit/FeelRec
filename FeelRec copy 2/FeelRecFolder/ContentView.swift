@@ -38,7 +38,7 @@ struct ContentView: View {
     
     var body: some View {
         if !hasSeenInformation {
-            InformationView()
+            OnboardingView()
         } else {
             NavigationStack {
                 ZStack {
@@ -131,6 +131,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .modelContainer(for: Audio.self)
     }
 }
