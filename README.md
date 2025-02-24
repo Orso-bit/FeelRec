@@ -12,8 +12,8 @@ FeelRec is an iOS app built with XCode that records and trascribes what the user
 
 ## Requirements
 
-- iOS 18+
-- Xcode 16+
+- iOS 18.0+
+- Xcode 16.0+
 
 ## Installation
 
