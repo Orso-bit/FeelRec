@@ -10,6 +10,11 @@ FeelRec is an iOS app built with XCode that records and trascribes what the user
 - **Recording** of speech
 - **CoreML** for sentiment analysis
 
+## Requirements
+
+- iOS 18+
+- Xcode 16+
+
 ## Installation
 
 1. Clone this repository: `git clone <https://github.com/Orso-bit/FeelRecApp.git`>
