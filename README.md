@@ -1,4 +1,4 @@
-# FeelRecApp
+# FeelRec
 
 Emotional speech recorder
 
