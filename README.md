@@ -19,6 +19,8 @@ FeelRec is an iOS app built with XCode that records and trascribes what the user
 
 ## Installation
 
-1. Clone this repository: `git clone <https://github.com/Orso-bit/FeelRecApp.git`>
-2. Open the project in Xcode
-3. Run the app on a simulator or connected device
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Orso-bit/FeelRecApp.git
+4. Open the project in Xcode
+5. Run the app on a simulator or connected device
